@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class ZoneScore : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int id;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

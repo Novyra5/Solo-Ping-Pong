@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Movement_ball : MonoBehaviour
 {
+    public GameManager gameManager;
     public Rigidbody2D rb2d;
     public float speed;
     public float maxInitialAngel = 0.67f;
@@ -33,6 +34,7 @@ public class Movement_ball : MonoBehaviour
         ZoneScore zoneScore = collision.GetComponent<ZoneScore>();
         if (zoneScore)
         {
+            gameManager.OneScoreZoneREached(zoneScore.id);
             ResetBall();
             InitialPush();
         }
