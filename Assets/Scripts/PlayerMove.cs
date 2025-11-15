@@ -25,7 +25,6 @@ public class PlayerMove : MonoBehaviour
 
     private void Move(float movement)
     {
-
         Vector2 velo = rb2d.velocity;
         velo.y = moveSpeed * movement;
         rb2d.velocity = velo;
