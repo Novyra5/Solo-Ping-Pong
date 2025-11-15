@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScoreText.cs" />
     <Compile Include="Assets\Scripts\Movement_ball.cs" />
+    <Compile Include="Assets\Scripts\EnemyBot.cs" />
     <Compile Include="Assets\Scripts\ZoneScore.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
