@@ -22,10 +22,11 @@ public class EnemyAI : MonoBehaviour
 
     private void MoveBot(float posBall)
     {
+
         Vector2 curentPos = enemyPaddle.position;
         Vector2 targetPos = new Vector2 (curentPos.x, posBall);
 
-        Vector2 newPos = Vector2.MoveTowards(curentPos, targetPos, speed * Time.deltaTime);
+        Vector2 newPos = Vector2.MoveTowards(curentPos, targetPos, speed * (Time.deltaTime * 1.5f));
 
         enemyPaddle.MovePosition(newPos);
         

@@ -7,7 +7,7 @@ using UnityEngine.UIElements.Experimental;
 public class PlayerMove : MonoBehaviour
 {
     public Rigidbody2D rb2d;
-    public float moveSpeed = 2f;
+    public float speed = 2f;
 
 
     private void Update()
@@ -26,7 +26,7 @@ public class PlayerMove : MonoBehaviour
     private void Move(float movement)
     {
         Vector2 velo = rb2d.velocity;
-        velo.y = moveSpeed * movement;
+        velo.y = speed * movement;
         rb2d.velocity = velo;
     }
 }

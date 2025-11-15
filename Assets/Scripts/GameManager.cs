@@ -4,22 +4,44 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int scorePlayer, scoreEnemy;
     public ScoreText score_RIGHT, score_LEFT;
+    public PlayerMove player;
+    public EnemyAI enemy;
+    public Movement_ball ball;
+
+    public int scorePlayer, scoreEnemy;
+    
+    public float speedUP = 1.1f;
 
     public void OneScoreZoneREached(int id)
     {
-        if (id == 1)
-            scoreEnemy++;
+        switch (id)
+        {
+            case 1:
+                scoreEnemy++;
+                break;
+            case 2:
+                scorePlayer++;
+                break;
 
-        if (id == 2)
-            scorePlayer++;
+        }
         UpdateScores();
+        SpeedUp();
     }
 
     private void UpdateScores()
     {
         score_LEFT.SetScore(scorePlayer);
         score_RIGHT.SetScore(scoreEnemy);
+    }
+
+    private void SpeedUp()
+    {
+        if (scoreEnemy + scorePlayer < 10)
+        {
+            player.speed ++;
+            enemy.speed ++;
+            ball.speed ++;
+        }
     }
 }
